@@ -30,3 +30,10 @@ label
 preview url for frame
 Size	1.5 GB
 Annotator 
+
+This project includes:
+
+writeup
+main (Jupyter notebook)
+output images 
+output video 
