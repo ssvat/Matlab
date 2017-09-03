@@ -68,8 +68,8 @@ Here's a [link to my video result](./project_video.mp4)
 
 
 ###Discussion
-
 ####1. Problems / issues  
+If time allowed, augmenting data can be implmented to improve prediction. 
 
  
 
