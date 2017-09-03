@@ -30,39 +30,39 @@ I trained a linear SVM using parameters mentioned above.
 
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 
-![alt text](image2.png)
+![alt text](output_images/image2.png)
 
 ####2. Examples of test images (optimizing the performance of my classifier)
 
 Ultimately I searched on two scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
-![alt text](image3.png)
+![alt text](output_images/image3.png)
 ---
 
-### Video Implementation
-
-####1. My pipeline performs reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes but identifying the vehicles most of the time with minimal false positives.)
-Here's a [link to my video result](./project_video.mp4)
-
-
-####2. Implementing filter for false positives and method for combining overlapping bounding boxes.
+####3. Implementing filter for false positives and method for combining overlapping bounding boxes.
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
-### Here are six frames and their corresponding heatmaps:
+### Here are six images and their corresponding heatmaps:
 
-![alt text](image4.png)
+![alt text](output_images/image4.png)
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text](image5.png)
+![alt text](output_images/image5.png)
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text](image6.png)
+![alt text](output_images/image6.png)
+![alt text](output_images/image7.png)
 
 
+### Video Implementation
 
+####1. Store information
+Because the sliding windows are changing sizes on the test images, there is one class added to save information from previous frame in the pipeline so that the detection on the video is more consistent in each frame of the video.
+My pipeline performs reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes but identifying the vehicles most of the time with minimal false positives.)
+Here's a [link to my video result](./project_video.mp4)
 ---
 
 ###Discussion
