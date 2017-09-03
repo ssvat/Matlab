@@ -60,6 +60,7 @@ Here's an example result showing the heatmap from a series of frames of video, t
 ### Video Implementation
 
 ####1. Store information
+
 Because the sliding windows are changing sizes on the test images, there is one class added to save information from previous frame in the pipeline so that the detection on the video is more consistent in each frame of the video.
 My pipeline performs reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes but identifying the vehicles most of the time with minimal false positives.)
 Here's a [link to my video result](./project_video.mp4)
@@ -68,6 +69,7 @@ Here's a [link to my video result](./project_video.mp4)
 ###Discussion
 
 ####1. Problems / issues  
+
 My pipeline likely fail.  To make it more robust,
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
