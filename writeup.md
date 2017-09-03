@@ -18,7 +18,7 @@ I started by reading in all the `vehicle` and `non-vehicle` images.  I then expl
 I tried various combinations of parameters and finally used the `YUV` color space and HOG parameters of `orientations=11`, `pixels_per_cell=(16, 16)` and `cells_per_block=(2, 2)`
 Here is an example of one of each of the `vehicle` and `non-vehicle` classes. 
 
-![alt text][image1]
+![alt text](output_images/image1.png)
 
 ####2. Training a classifier using my selected HOG features (and color features).
 
@@ -30,13 +30,13 @@ I trained a linear SVM using parameters mentioned above.
 
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 
-![alt text][image2]
+![alt text](image2.png)
 
 ####2. Examples of test images (optimizing the performance of my classifier)
 
 Ultimately I searched on two scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
-![alt text][image3]
+![alt text](image3.png)
 ---
 
 ### Video Implementation
@@ -53,13 +53,13 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Here are six frames and their corresponding heatmaps:
 
-![alt text][image4]
+![alt text](image4.png)
 
 ### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
-![alt text][image5]
+![alt text](image5.png)
 
 ### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text][image6]
+![alt text](image6.png)
 
 
 
