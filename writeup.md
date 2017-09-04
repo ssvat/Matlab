@@ -45,15 +45,15 @@ I recorded the positions of positive detections in each frame of the video.  Fro
 
 Here's an example result showing the heatmap from a series of frames of video, the result of `scipy.ndimage.measurements.label()` and the bounding boxes then overlaid on the last frame of video:
 
-### Here are six images and their corresponding heatmaps:
+Here is the corresponding heatmaps:
 
 ![alt text](output_images/image4.png)
 
-### Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from all six frames:
+Here is the output of `scipy.ndimage.measurements.label()` on the integrated heatmap from the test image:
 ![alt text](output_images/image5.png)
 
-### Here the resulting bounding boxes are drawn onto the last frame in the series:
-![alt text](output_images/image6.png)
+Here the resulting bounding boxes are drawn from all test images:
+
 ![alt text](output_images/image7.png)
 
 
