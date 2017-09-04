@@ -71,7 +71,7 @@ Here's a [link to my video result](./project_video.mp4)
 ####1. Problems / issues  
 When the car emerges from the field of view, there are short periods that cars are not detected at the first time. When two cars appeared side by side, there are single detection rather than two detections. There is still one false positve.
 
-I think the problems come from less datasets. If time allowed, augmenting data can be implmented to improve prediction. 
+I think the problems come from less datasets. If time allowed, augmenting data can be implmented to improve prediction. Other steps can be considered too, such as choice of feature vector, thresholding the decision function, hard negative mining etc. 
 
  
 
