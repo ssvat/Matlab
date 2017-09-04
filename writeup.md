@@ -69,7 +69,9 @@ Here's a [link to my video result](./project_video.mp4)
 
 ###Discussion
 ####1. Problems / issues  
-If time allowed, augmenting data can be implmented to improve prediction. 
+When the car emerges from the field of view, there are short periods that cars are not detected at the first time. When two cars appeared side by side, there are single detection rather than two detections. There is still one false positve.
+
+I think the problems come from less datasets. If time allowed, augmenting data can be implmented to improve prediction. 
 
  
 
