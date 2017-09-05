@@ -28,13 +28,13 @@ I trained a linear SVM using parameters mentioned above.
 
 ####1. Implementing a sliding window search (Decide what scales to search and how much to overlap windows)
 
-I decided to search window positionsall over the image:
+I decided to search window positionsall over the image. 
 
 ![alt text](output_images/image2.png)
 
 ####2. Examples of test images (optimizing the performance of my classifier)
 
-Ultimately I searched on various scales using YUV 3-channel HOG features plus spatially binned color and histograms of color in the feature vector by combining Various Sliding Window Searches, which provided a nice result.  Here are some example images:
+Ultimately I searched on various scales using YUV 3-channel HOG features by combining Various Sliding Window Searches, which provided a nice result.  I used try and error method by tuning those parameters (window sizes/scales, overlap ratio and chose best resuls what I have on a given time.  Here are some example images:
 
 ![alt text](output_images/image3.png)
 ---
