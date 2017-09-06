@@ -78,5 +78,15 @@ When the car emerges from the field of view, there are short periods that cars a
 
 I think the problems come from less datasets. If time allowed, augmenting data can be implmented to improve prediction. Other steps can be considered too, such as choice of feature vector, thresholding the decision function, hard negative mining etc. 
 
+Here is an example of augmentation to try:
+
+def create_variant(image):
+    if (random.choice([1, 0])):
+        image = scipy.ndimage.interpolation.shift(image, [random.randrange(-3, 3), random.randrange(-3, 3), 0])
+    else:
+
+        image = scipy.ndimage.interpolation.rotate(image, random.randrange(-8, 8), reshape=False)
+    return image
+
  
 
