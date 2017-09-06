@@ -16,13 +16,14 @@ The code for this step is contained in the first code cell of the IPython notebo
 
 I started by reading in all the `vehicle` and `non-vehicle` images.  I then explored different color spaces and different `skimage.hog()` parameters (`orientations`, `pixels_per_cell`, and `cells_per_block`).  I grabbed random images from each of the two classes and displayed them to get a feel for what the `skimage.hog()` output looks like.
 I tried various combinations of parameters and finally used the `YUV` color space and HOG parameters of `orientations=11`, `pixels_per_cell=(16, 16)` and `cells_per_block=(2, 2)`
+
 Here is an example of one of each of the `vehicle` and `non-vehicle` classes. 
 
 ![alt text](output_images/image1.png)
 
 ####2. Training a classifier using my selected HOG features (and color features).
 
-I trained a linear SVM using parameters mentioned above.
+I trained a linear SVM using parameters mentioned above. I have also played around bin spatial and color histograms but the results show the classifier SVM without these features generated more satisfying results. 
 
 ###Sliding Window Search
 
