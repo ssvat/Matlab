@@ -28,13 +28,18 @@ I trained a linear SVM using parameters mentioned above.
 
 ####1. Implementing a sliding window search (Decide what scales to search and how much to overlap windows)
 
-I decided to search window positionsall over the image. 
+I used the method called find_cars. This method combines HOG feature extraction with a sliding window search. The strategy is to extract HOG features for the entire image or its selected portion, followed by subsampling these full-image features according to the size of the window and classification. The prupose is to save time from feature extraction on each window individually. 
+
+The method returns a list of rectangle objects corresponding to the windows that predicts a car. Here is the exmple of the image:  
 
 ![alt text](output_images/image2.png)
 
 ####2. Examples of test images (optimizing the performance of my classifier)
 
-Ultimately I searched on various scales using YUV 3-channel HOG features by combining Various Sliding Window Searches, which provided a nice result.  I used try and error method by tuning those parameters (window sizes/scales, overlap ratio and chose best resuls what I have on a given time.  Here are some example images:
+Finally I searched on various scales using YUV 3-channel (RGB, HLS, and HSV are also explored) HOG features by combining Various Sliding Window Searches, which provided a nice result.  I used explored several configurations of window sizes and positions, with various overlaps in the X and Y directions, along with try and error method by tuning those parameters (window sizes/scales, overlap ratio) and chose best resuls what I have on a given time.  The combination of orient (11), pix_per_cell (16), cell_per_block (2), hog_channel ('ALL') produced the best results among several tests.  
+Lastly, the rectangles returned from each method call are aggregated with a scale of window ranging from 1.0 to 3.5, resulting in least false positives. ystart and ystop are examined and manipulated because only certain range in vertical direction is considered for window size to avoid false positives, meanwhile finishing detection in a reasonable speed. 
+
+The image below shows the rectangles returned by find_cars drawn onto one of the test images, indicating that there are several positive predictions on these two cars on the same direction of neighboring lanes:
 
 ![alt text](output_images/image3.png)
 ---
