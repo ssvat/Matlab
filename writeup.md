@@ -61,16 +61,25 @@ Here the resulting bounding boxes are drawn from all test images:
 
 ![alt text](output_images/image7.png)
 
+Also in the further study, there are other methods to explore:
+
+decision function with SVC:
+http://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html#sklearn.svm.LinearSVC.decision_function
+hard negative mining:
+https://www.reddit.com/r/computervision/comments/2ggc5l/what_is_hard_negative_mining_and_how_is_it/
+https://www.researchgate.net/post/HOG-Is_there_a_relationship_between_hard_negative_mining_and_SVM_C_parameter
 
 ### Video Implementation
 
 ####1. Store information
 
 Because the sliding windows are changing sizes on the test images, there is one class added to save information from previous frame in the pipeline so that the detection on the video is more consistent in each frame of the video.
+
 My pipeline performs reasonably well on the entire project video (somewhat wobbly or unstable bounding boxes but identifying the vehicles most of the time with minimal false positives.)
 
 Here's a [link to my video result](./project_video.mp4)
 
+Additionally, the performance metrics can be added in the future (for examples in seconds or milliseconds per frame) because the performance is very important at real-time processing and evaluation. 
 
 ###Discussion
 ####1. Problems / issues  
